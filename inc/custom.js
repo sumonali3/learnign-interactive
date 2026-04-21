@@ -1,2 +1,3 @@
-// this is our 2nd comment 
-alert("Hello world");
+
+console.log("Hello world");
+
