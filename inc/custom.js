@@ -1,1 +1,0 @@
-let persons = ['md', 'sumon']
