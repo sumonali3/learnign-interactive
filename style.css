@@ -1,0 +1,23 @@
+table, th, td{
+     border: 1px solid red;
+     border-collapse: collapse;
+     padding: 5px 15px;
+     text-align: center;
+
+}
+
+tbody tr:nth-child(even){
+     background-color: rgba(150, 212, 212, 0.4);
+}
+
+tbody tr:nth-child(odd){
+     background: rgba(133, 252, 252, 0.8);;
+}
+
+ th:nth-child(even){
+     background: rgba(141, 246, 149, 0.4);
+}
+
+th:nth-child(odd){
+      background: rgba(103, 110, 245, 0.4);
+} 
