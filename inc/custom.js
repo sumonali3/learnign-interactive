@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 console.log("Hello world");
 
@@ -21,4 +20,4 @@ lastName = "khan";
 console.log(firstName);
 console.log(lastName);
 console.log(age);
->>>>>>> javascript
+
