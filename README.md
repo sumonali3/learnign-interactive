@@ -1,6 +1,3 @@
 this is our first git class
 
-
-added form github editor
-
-again updated form editor
+live site: https://sumonali3.github.io/learnign-interactive/
