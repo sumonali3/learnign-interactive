@@ -89,5 +89,9 @@ switch (new Date().getDay()) {
           console.log('Saturday');
 }
 
-
-// js loop 
+// js loop
+for(let i = 1; i <= 50; i++){
+     if(i % 5 == 2){
+          console.log(i);
+     }
+}
