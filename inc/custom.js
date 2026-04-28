@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 console.log("Hello world");
 
@@ -21,3 +22,5 @@ console.log(firstName);
 console.log(lastName);
 console.log(age);
 
+=======
+>>>>>>> javascript
