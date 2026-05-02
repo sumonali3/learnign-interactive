@@ -1,23 +1,256 @@
-table, th, td{
+table,
+th,
+td {
      border: 1px solid red;
      border-collapse: collapse;
      padding: 5px 15px;
      text-align: center;
-
 }
 
-tbody tr:nth-child(even){
+tbody tr:nth-child(even) {
      background-color: rgba(150, 212, 212, 0.4);
 }
 
-tbody tr:nth-child(odd){
-     background: rgba(133, 252, 252, 0.8);;
+tbody tr:nth-child(odd) {
+     background: rgba(133, 252, 252, 0.8);
 }
 
- th:nth-child(even){
+th:nth-child(even) {
      background: rgba(141, 246, 149, 0.4);
 }
 
-th:nth-child(odd){
-      background: rgba(103, 110, 245, 0.4);
-} 
+th:nth-child(odd) {
+     background: rgba(103, 110, 245, 0.4);
+}
+/* universal style  */
+
+* {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+
+:root {
+     --primary-color: #094b72;
+     --text-color: #4f4f4f;
+     --h1-size: clamp(1.875rem, 0.8036rem + 4.7619vw, 5.625rem);
+     --text-size: clamp(0.9375rem, 0.8839rem + 0.2381vw, 1.125rem);
+     --hero-text-size: clamp(1rem, 0.8571rem + 0.6349vw, 1.5rem);
+}
+
+.container {
+     max-width: 1200px;
+     margin: 0 auto;
+     width: 100%;
+}
+
+/* close universal style  */
+
+/* header style  */
+.header-section {
+     background-color: #fff;
+     border-bottom: 1px solid #00000020;
+     padding: 10px 0;
+}
+.head-sec {
+     display: flex;
+     justify-content: space-between;
+     gap: 20px;
+     align-items: center;
+}
+.img img {
+     width: 100%;
+     height: auto;
+     text-align: left;
+}
+
+.menu ul {
+     display: flex;
+     gap: 20px;
+     justify-content: space-between;
+}
+
+.menu ul li {
+     list-style: none;
+     padding: 5px 10px;
+     font-size: 18px;
+}
+
+.menu ul li:hover {
+     background-color: red;
+     border-radius: 30px;
+}
+.menu ul li:hover a {
+     color: #fff;
+}
+
+.menu ul li a {
+     text-decoration: none;
+     color: #000;
+     text-transform: uppercase;
+}
+.search {
+     background-color: #fff;
+     display: inline-flex;
+     gap: 5px;
+     position: relative;
+}
+
+.search input {
+     padding: 5px 10px;
+     border-radius: 8px;
+     border: 1px solid #00000025;
+}
+.search input:focus {
+     outline: 1px solid #094b726f;
+}
+
+.search label {
+     position: absolute;
+     right: 10px;
+     top: 10%;
+     background: #f7f7f7;
+     padding: 2px 10px;
+     border-radius: 8px;
+}
+
+/* style for hero section  */
+.hero-sec {
+     background: #f9f8f9;
+}
+
+.herosection {
+     display: flex;
+     justify-content: space-between;
+     align-items: end;
+     gap: 20px;
+}
+.herosection .leftside {
+     width: 60%;
+     padding-bottom: 50px;
+}
+
+.herosection .leftside h2 {
+     font-size: var(--h1-size);
+     font-weight: 700;
+     color: var(--primary-color);
+}
+
+.herosection .leftside p {
+     font-size: var(--hero-text-size);
+     font-weight: 500;
+     line-height: 1.4em;
+     margin: 15px 0;
+     color: var(--text-color);
+     width: 85%;
+}
+
+.herosection .leftside button {
+     font-size: 18px;
+     text-transform: uppercase;
+     padding: 20px 25px;
+     border-radius: 8px;
+     color: #fff;
+     background-color: var(--primary-color);
+     border: none;
+}
+
+.herosection .leftside .single-para {
+     color: #4f4f4f;
+     margin-top: 50px;
+}
+
+.herosection .leftside .transted-logo {
+     display: flex;
+     gap: 30px;
+}
+
+.herosection .leftside .transted {
+     display: flex;
+     gap: 30px;
+     margin-top: 20px;
+}
+
+.herosection .right-side {
+     width: 40%;
+}
+
+.herosection .right-side img {
+     width: 100%;
+     height: auto;
+     text-align: center;
+     max-width: 85%;
+}
+
+@media screen and (max-width: 1024px) {
+     .container {
+          width: 100%;
+          padding: 20px;
+     }
+     .head-sec {
+          flex-direction: column;
+     }
+
+     .herosection {
+          flex-direction: column-reverse;
+     }
+     .herosection .leftside {
+          width: 100%;
+     }
+     .herosection .right-side {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+     }
+     .herosection .right-side img {
+          max-width: 55%;
+     }
+
+     .herosection .leftside p {
+          width: 100%;
+     }
+     .herosection .leftside .single-para {
+          margin-top: 35px;
+     }
+}
+
+@media screen and (max-width: 768px) {
+     .container {
+          width: 100%;
+          padding: 20px;
+     }
+     .herosection .leftside button {
+          font-size: 16px;
+          padding: 15px 20px;
+     }
+     .menu ul li {
+          padding: 5px;
+          font-size: 16px;
+     }
+     .menu ul {
+          gap: 10px;
+     }
+
+     .herosection .leftside .single-para {
+          margin-top: 25px;
+     }
+}
+
+@media screen and (max-width: 360px) {
+     .container {
+          width: 100%;
+          padding: 20px;
+     }
+
+     .herosection .leftside .single-para {
+          margin-top: 20px;
+     }
+
+     .menu ul li {
+          padding: 5px;
+          font-size: 15px;
+     }
+     .menu ul {
+          gap: 5px;
+     }
+}
