@@ -33,11 +33,15 @@ th:nth-child(odd) {
 :root {
      --primary-color: #094b72;
      --text-color: #4f4f4f;
+     --h1-size: clamp(1.875rem, 0.8036rem + 4.7619vw, 5.625rem);
+     --text-size: clamp(0.9375rem, 0.8839rem + 0.2381vw, 1.125rem);
+     --hero-text-size: clamp(1rem, 0.8571rem + 0.6349vw, 1.5rem);
 }
 
 .container {
-     width: 1200px;
+     max-width: 1200px;
      margin: 0 auto;
+     width: 100%;
 }
 
 /* close universal style  */
@@ -119,20 +123,21 @@ th:nth-child(odd) {
      display: flex;
      justify-content: space-between;
      align-items: end;
+     gap: 20px;
 }
-.herosection .leftside{
+.herosection .leftside {
      width: 60%;
      padding-bottom: 50px;
 }
 
 .herosection .leftside h2 {
-     font-size: 90px;
+     font-size: var(--h1-size);
      font-weight: 700;
      color: var(--primary-color);
 }
 
 .herosection .leftside p {
-     font-size: 24px;
+     font-size: var(--hero-text-size);
      font-weight: 500;
      line-height: 1.4em;
      margin: 15px 0;
@@ -166,14 +171,86 @@ th:nth-child(odd) {
      margin-top: 20px;
 }
 
-.herosection .right-side{
+.herosection .right-side {
      width: 40%;
 }
 
-.herosection .right-side img{
+.herosection .right-side img {
      width: 100%;
      height: auto;
-     text-align: left;
+     text-align: center;
      max-width: 85%;
+}
 
+@media screen and (max-width: 1024px) {
+     .container {
+          width: 100%;
+          padding: 20px;
+     }
+     .head-sec {
+          flex-direction: column;
+     }
+
+     .herosection {
+          flex-direction: column-reverse;
+     }
+     .herosection .leftside {
+          width: 100%;
+     }
+     .herosection .right-side {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+     }
+     .herosection .right-side img {
+          max-width: 55%;
+     }
+
+     .herosection .leftside p {
+          width: 100%;
+     }
+     .herosection .leftside .single-para {
+          margin-top: 35px;
+     }
+}
+
+@media screen and (max-width: 768px) {
+     .container {
+          width: 100%;
+          padding: 20px;
+     }
+     .herosection .leftside button {
+          font-size: 16px;
+          padding: 15px 20px;
+     }
+     .menu ul li {
+          padding: 5px;
+          font-size: 16px;
+     }
+     .menu ul {
+          gap: 10px;
+     }
+
+     .herosection .leftside .single-para {
+          margin-top: 25px;
+     }
+}
+
+@media screen and (max-width: 360px) {
+     .container {
+          width: 100%;
+          padding: 20px;
+     }
+
+     .herosection .leftside .single-para {
+          margin-top: 20px;
+     }
+
+     .menu ul li {
+          padding: 5px;
+          font-size: 15px;
+     }
+     .menu ul {
+          gap: 5px;
+     }
 }
