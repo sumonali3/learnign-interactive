@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 function ageValidity() {
      let age = document.getElementById('userAge').value;
 
@@ -93,9 +91,43 @@ switch (new Date().getDay()) {
 }
 
 // js loop
-for(let i = 1; i <= 50; i++){
-     if(i % 5 == 2){
+for (let i = 1; i <= 50; i++) {
+     if (i % 5 == 2) {
           console.log(i);
      }
 }
->>>>>>> javascript
+
+
+let car = ['BMW', 'Volvo', 'Toyota', 'Ford', 'Tesla'];
+car.push('Saab');
+
+for (let j = 0; j < car.length; j++) {
+     console.log(car[j]);
+}
+
+let personData = {
+     name: 'Md Sumon Ali Akondo',
+     age: 24,
+     country: 'Bangladesh',
+     job: 'Web Developer',
+};
+
+for (let i in personData) {
+     let capLetter = i.charAt(0).toUpperCase() + i.slice(1);
+     console.log(capLetter + ': ' + personData[i]);
+}
+
+car.forEach(function (dataEntry) {
+     console.log(dataEntry);
+});
+
+for (let i of car) {
+     console.log(i);
+}
+
+let num = 0;
+while (num < 7) {
+     console.log(num);
+     num++;
+}
+
