@@ -36,6 +36,7 @@ th:nth-child(odd) {
      --h1-size: clamp(1.875rem, 0.8929rem + 4.3651vw, 5.3125rem);
      --text-size: clamp(0.9375rem, 0.8839rem + 0.2381vw, 1.125rem);
      --hero-text-size: clamp(1rem, 0.8571rem + 0.6349vw, 1.5rem);
+     --h2-style: clamp(1.5625rem, 1.1518rem + 1.8254vw, 3rem);
 }
 
 .container {
@@ -154,7 +155,7 @@ th:nth-child(odd) {
      border: none;
 }
 
-.herosection .leftside button a{
+.herosection .leftside button a {
      color: #fff;
      text-decoration: 0;
 }
@@ -184,6 +185,59 @@ th:nth-child(odd) {
      height: auto;
      text-align: center;
      max-width: 95%;
+}
+
+.whydo {
+     padding: 100px 0;
+     background-color: #f2fcff;
+}
+
+.why-do-section {
+     display: flex;
+     justify-content: space-between;
+     gap: 20px;
+}
+.leftside-content,
+.rideside-card {
+     width: 50%;
+}
+.leftside-content h2 {
+     font-size: var(--h2-style);
+     color: #1e1e1e;
+     margin: 20px 0;
+}
+
+.leftside-content p {
+     font-size: var(--text-size);
+     color: #8b8c8c;
+}
+.rideside-card {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 20px;
+}
+.rideside-card .card {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     background-color: #fff;
+     padding: 20px;
+     border-radius: 12px;
+     box-shadow: 0 0 50px #00000006;
+}
+
+.rideside-card .card h3 {
+     font-size: 22px;
+}
+
+.rideside-card img {
+     width: 100%;
+     max-width: 20%;
+}
+
+.rideside-card .card p {
+     font-size: 16px;
+     color: #8b8c8c;
 }
 
 @media screen and (max-width: 1024px) {
@@ -238,6 +292,24 @@ th:nth-child(odd) {
      .herosection .leftside .single-para {
           margin-top: 25px;
      }
+
+     /* whydo section media  */
+     .why-do-section {
+          flex-direction: column;
+     }
+
+     .leftside-content,
+     .rideside-card {
+          width: 100%;
+     }
+     
+     .whydo {
+          padding: 50px 0;
+     }
+
+     .rideside-card .card h3 {
+          font-size: 18px;
+     }
 }
 
 @media screen and (max-width: 360px) {
@@ -256,5 +328,10 @@ th:nth-child(odd) {
      }
      .menu ul {
           gap: 5px;
+     }
+     /* why do sectio media */
+
+     .rideside-card {
+          grid-template-columns: 1fr;
      }
 }
