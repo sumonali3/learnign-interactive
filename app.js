@@ -169,6 +169,9 @@ const mobileModel = {
      brandModel: function () {
           return `Mobile brand is ${this.brand} and model is ${this.model}`;
      },
+     battary: {
+          mah: 5000,
+     },
 };
 
 console.log(mobileModel.brandModel());
@@ -182,3 +185,31 @@ console.log(mobileModel.model);
 
 // console.log(Object.keys(mobileModel));
 // console.log(Object.values(mobileModel));
+
+const obj1 = {
+     a: 1,
+     b: 2,
+     c: 2,
+};
+const obj2 = {
+     d: 1,
+     e: 2,
+     f: 2,
+};
+const obj3 = {
+     g: 1,
+     h: 2,
+     i: 2,
+};
+
+const objFinal = Object.assign({}, obj1, obj2, obj3);
+// let objFinal = { obj1, obj2, obj3 };
+console.log(objFinal);
+console.log(mobileModel.battary.mah);
+
+function Person() {
+     ((this.firstName = 'Ali'), (this.lastName = 'Hasan'));
+}
+
+const person1 = new Person();
+console.log(person1);
