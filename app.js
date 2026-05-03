@@ -1,10 +1,11 @@
+/*
 function ageValidity() {
      let age = document.getElementById('userAge').value;
 
      let status = age >= 18 ? 'you are an adult' : 'you are a child';
      document.getElementById('result').innerText = status;
 }
-// javascript if statement
+ javascript if statement
 let person;
 person = 'Musfiq';
 
@@ -50,7 +51,7 @@ switch (new Date().getDay()) {
           console.log('Monday');
           break;
      case 2:
-          console.log('Tuesday');
+          console.log('tuesDay');
           break;
      case 3:
           console.log('Wednesday');
@@ -63,33 +64,10 @@ switch (new Date().getDay()) {
           break;
      case 6:
           console.log('Saturday');
-     default:
-          console.log('Miss the day');
+          break;
 }
 
-switch (new Date().getDay()) {
-     case 0:
-          console.log('Sunday');
-          break;
-     case 1:
-          console.log('Monday');
-     case 2:
-          console.log('Tuesday');
-          break;
-     case 3:
-          console.log('Wednesday');
-          break;
-     case 4:
-          console.log('Thursday');
-          break;
-     case 5:
-          console.log('Today our off day');
-          break;
-     case 6:
-          console.log('Saturday');
-}
-
-// js loop
+js loop
 for (let i = 1; i <= 50; i++) {
      if (i % 5 == 2) {
           console.log(i);
@@ -128,3 +106,68 @@ while (num < 7) {
      console.log(num);
      num++;
 }
+
+function isSubscribe(){
+     document.getElementById('outPut').innerText = 'Subscribed';
+}
+
+function isSubscribe() {
+     document.getElementById('outPut').innerText = 'Subscribed';
+}
+document.getElementById('btn').addEventListener('click', isSubscribe);
+
+(function (myText) {
+     console.log('this is inovoked function', myText);
+})('Hello my Text');
+
+let maths = function (x, y) {
+     return x * y;
+};
+console.log(maths(3, 4));
+console.log(maths(20, 5));
+
+function newFunc() {
+     let firstName = 'Ali';
+     console.log(firstName);
+}
+newFunc();
+
+let numbers = [4, 5, 7];
+let sqNumbers = numbers.map(function (number) {
+     return number * number;
+});
+
+console.log(sqNumbers);
+
+ arrow function
+
+let add = (x, y) => x * y;
+console.log(add(105, 10));
+
+
+function great(firstName){
+     function sayHello(){
+          alert ('hello ' + firstName);
+     }
+     return sayHello();
+}
+great('ali');
+*/
+
+//Javascripti Objects
+
+const mySymb = Symbol('key1');
+const mobileModel = {
+     //key: value
+     brand: 'Samsung',
+     model: 's24 Ultra',
+     processor: 'Sanpdragon Gen 3',
+     camera: ['200MP', '12Mp', '12MP'],
+     hasSelfieCamera: true,
+     'Selfi Camera': '24MP',
+     [mySymb]: 'Mykey1',
+};
+
+console.log(mobileModel.brand);
+console.log(mobileModel['Selfi Camera']);
+console.log(mobileModel[mySymb]);
