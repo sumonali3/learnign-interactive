@@ -166,8 +166,19 @@ const mobileModel = {
      hasSelfieCamera: true,
      'Selfi Camera': '24MP',
      [mySymb]: 'Mykey1',
+     brandModel: function () {
+          return `Mobile brand is ${this.brand} and model is ${this.model}`;
+     },
 };
 
+console.log(mobileModel.brandModel());
 console.log(mobileModel.brand);
-console.log(mobileModel['Selfi Camera']);
-console.log(mobileModel[mySymb]);
+mobileModel.model = 's25 Ultra';
+Object.freeze(mobileModel);
+console.log(mobileModel.model);
+// console.log(mobileModel.hasOwnProperty('cameras'));
+// console.log(mobileModel['Selfi Camera']);
+// console.log(mobileModel[mySymb]);
+
+// console.log(Object.keys(mobileModel));
+// console.log(Object.values(mobileModel));
